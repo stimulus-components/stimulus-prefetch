@@ -4,7 +4,7 @@
 [![](https://img.shields.io/npm/v/stimulus-prefetch.svg)](https://www.npmjs.com/package/stimulus-prefetch)
 [![](https://github.com/stimulus-components/stimulus-prefetch/workflows/Lint/badge.svg)](https://github.com/stimulus-components/stimulus-prefetch)
 [![](https://img.shields.io/github/license/stimulus-components/stimulus-prefetch.svg)](https://github.com/stimulus-components/stimulus-prefetch)
-[![Netlify Status](https://api.netlify.com/api/v1/badges/d62d950e-aae7-464d-8333-1078a16ec481/deploy-status)](https://stimulus-prefetch.netlify.com)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/d3b878bb-b10c-47d2-a21b-e0a510120a4c/deploy-status)](https://stimulus-prefetch.netlify.com)
 
 ## Getting started
 

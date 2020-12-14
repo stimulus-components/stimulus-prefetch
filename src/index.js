@@ -32,12 +32,12 @@ export default class extends Controller {
     if (connection) {
       // Don't prefetch if using 2G or if Save-Data is enabled.
       if (connection.saveData) {
-        console.error('[stimulus-prefetch] Cannot prefetch, Save-Data is enabled.')
+        console.warn('[stimulus-prefetch] Cannot prefetch, Save-Data is enabled.')
         return
       }
 
       if (/2g/.test(connection.effectiveType)) {
-        console.error('[stimulus-prefetch] Cannot prefetch, network conditions are poor.')
+        console.warn('[stimulus-prefetch] Cannot prefetch, network conditions are poor.')
         return
       }
     }

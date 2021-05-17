@@ -1,32 +1,38 @@
 import { Controller } from 'stimulus'
 
 export default class extends Controller {
-  initialize () {
+  // @ts-ignore
+  element: HTMLAnchorElement
+
+  initialize (): void {
     this.prefetch = this.prefetch.bind(this)
     this.load = this.load.bind(this)
   }
 
-  connect () {
+  connect (): void {
     if (!this.hasPrefetch) return
 
     this.load()
   }
 
-  load () {
-    const observer = new IntersectionObserver((entries, observer) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          this.prefetch()
+  load (): void {
+    const observer: IntersectionObserver = new IntersectionObserver(
+      (entries: IntersectionObserverEntry[], observer: IntersectionObserver) => {
+        entries.forEach((entry: IntersectionObserverEntry) => {
+          if (entry.isIntersecting) {
+            this.prefetch()
 
-          observer.unobserve(entry.target)
-        }
-      })
-    })
+            observer.unobserve(entry.target)
+          }
+        })
+      }
+    )
 
     observer.observe(this.element)
   }
 
-  prefetch () {
+  prefetch (): void {
+    // @ts-ignore
     const connection = navigator.connection
 
     if (connection) {
@@ -42,7 +48,7 @@ export default class extends Controller {
       }
     }
 
-    const link = document.createElement('link')
+    const link: HTMLLinkElement = document.createElement('link')
     link.rel = 'prefetch'
     link.href = this.element.href
     link.as = 'document'
@@ -50,8 +56,8 @@ export default class extends Controller {
     document.head.appendChild(link)
   }
 
-  get hasPrefetch () {
-    const link = document.createElement('link')
+  get hasPrefetch (): boolean {
+    const link: HTMLLinkElement = document.createElement('link')
 
     return link.relList && link.relList.supports && link.relList.supports('prefetch')
   }

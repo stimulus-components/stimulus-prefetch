@@ -33,7 +33,7 @@ export default class extends Controller {
 
   prefetch (): void {
     // @ts-ignore
-    const connection = navigator.connection
+    const connection: any = navigator.connection
 
     if (connection) {
       // Don't prefetch if using 2G or if Save-Data is enabled.

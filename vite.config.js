@@ -1,13 +1,14 @@
-import path from 'path'
+import { resolve } from 'path'
+import { defineConfig } from 'vite'
 
-export default ({ mode }) => {
+export default defineConfig(({ mode }) => {
   if (mode === 'netlify') {
     return {
       build: {
         rollupOptions: {
           input: {
-            index: path.resolve(__dirname, 'index.html'),
-            page: path.resolve(__dirname, 'page.html')
+            index: resolve(__dirname, 'index.html'),
+            card: resolve(__dirname, 'page.html')
           }
         }
       }
@@ -17,17 +18,18 @@ export default ({ mode }) => {
   return {
     build: {
       lib: {
-        entry: path.resolve(__dirname, 'src/index.ts'),
-        name: 'stimulus-prefetch'
+        entry: resolve(__dirname, 'src/index.ts'),
+        name: 'StimulusPrefetch',
+        fileName: 'stimulus-prefetch'
       },
       rollupOptions: {
-        external: ['stimulus'],
+        external: ['@hotwired/stimulus'],
         output: {
           globals: {
-            stimulus: 'Stimulus'
+            '@hotwired/stimulus': 'Stimulus'
           }
         }
       }
     }
   }
-}
+})

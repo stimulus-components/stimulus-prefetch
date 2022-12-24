@@ -6,6 +6,24 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [3.1.0] - 2022-12-23
+
+### Added
+
+- Adding `name` in library export to use the package with CDN, Sprockets and `import-maps`.
+
+### Changed
+
+- Only prefetch when connection effectiveType is `4g`. See: https://developer.mozilla.org/en-US/docs/Web/API/NetworkInformation/effectiveType.
+
+### Chore
+
+- Using `Stimulus` as external library reducing size from `10.78 KiB` to `1.13 kB`.
+- Bump dependencies.
+- Upgrading to Vite `4.x`.
+- Docs new UI.
+- Upgrading Node to `18.x`.
+
 ## [3.0.0] - 2021-09-29
 
 ### Chore

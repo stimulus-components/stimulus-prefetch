@@ -42,7 +42,7 @@ export default class extends Controller {
         return
       }
 
-      if (/2g/.test(connection.effectiveType)) {
+      if (connection.effectiveType !== '4g') {
         console.warn('[stimulus-prefetch] Cannot prefetch, network conditions are poor.')
         return
       }

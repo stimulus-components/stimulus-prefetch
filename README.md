@@ -1,22 +1,13 @@
 # Stimulus Prefetch
 
-[![](https://img.shields.io/npm/dt/stimulus-prefetch.svg)](https://www.npmjs.com/package/stimulus-prefetch)
-[![](https://img.shields.io/npm/v/stimulus-prefetch.svg)](https://www.npmjs.com/package/stimulus-prefetch)
-[![](https://github.com/stimulus-components/stimulus-prefetch/workflows/Lint/badge.svg)](https://github.com/stimulus-components/stimulus-prefetch)
-[![](https://img.shields.io/github/license/stimulus-components/stimulus-prefetch.svg)](https://github.com/stimulus-components/stimulus-prefetch)
+## 🚚 📦 This project has moved
 
-## Getting started
-
-A Stimulus controller that prefetch in-viewport links.
+This repository is now maintained in the main [Stimulus Components monorepo](https://github.com/stimulus-components/stimulus-components).
 
 ## 📚 Documentation
 
-See [stimulus-prefetch documentation](https://www.stimulus-components.com/docs/stimulus-prefetch/).
-
-## 👷‍♂️ Contributing
-
-Do not hesitate to contribute to the project by adapting or adding features ! Bug reports or pull requests are welcome.
+Visit the [stimulus-prefetch documentation](https://www.stimulus-components.com/docs/stimulus-prefetch/) for more information on how to use and integrate this controller.
 
 ## 📝 License
 
-This project is released under the [MIT](http://opensource.org/licenses/MIT) license.
+This project remains licensed under the [MIT](http://opensource.org/licenses/MIT) license.
